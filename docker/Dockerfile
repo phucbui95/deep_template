@@ -10,7 +10,7 @@ COPY requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
 RUN apt-get install -y zip wget
-
+RUN conda install -y -c fastai fastai
 # Copy source code
 COPY . /app/
 WORKDIR /app
